@@ -62,7 +62,7 @@ public class StartActivity extends Activity implements View.OnClickListener {
         BluetoothButton = (Button)findViewById(R.id.BluetoothButton);
         BluetoothButton.setOnClickListener(this);
 
-        if(bluetooth == null) finish();                                                 //Если на устройстве нет Bluetooth, то завершаем приложение
+        if(bluetooth == null) finish();                                                        //Если на устройстве нет Bluetooth, то завершаем приложение
         if(bluetooth.isEnabled()) BluetoothButton.setText(R.string.bluetooth_button_off);      //Проверяем включен или нет Bluetooth
         else BluetoothButton.setText(R.string.bluetooth_button_on);
 

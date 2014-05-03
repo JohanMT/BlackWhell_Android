@@ -3,9 +3,11 @@
 
     <string name="app_name">BlackWhell</string>
     <string name="loading">Подождите...</string>
+    <string name="setting">Настройки</string>
 
     <!--Start Activity -->
     <string name="bluetooth_button_on">Включить Bluetooth</string>
     <string name="bluetooth_button_off">Отключить Bluetooth</string>
+
 
 </resources>

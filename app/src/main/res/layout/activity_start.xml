@@ -13,7 +13,19 @@
         android:layout_height="wrap_content"
         android:text="@string/bluetooth_button_on"
         android:id="@+id/BluetoothButton"
+        android:layout_marginTop="188dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="107dp" />
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/setting"
+        android:id="@+id/button"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/BluetoothButton"
+        android:layout_alignLeft="@+id/BluetoothButton"
+        android:layout_alignStart="@+id/BluetoothButton"
+        android:layout_alignRight="@+id/BluetoothButton"
+        android:layout_alignEnd="@+id/BluetoothButton" />
 </RelativeLayout>
