@@ -21,5 +21,9 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".SettingActivity"
+            android:label="@string/setting">
+        </activity>
     </application>
 </manifest>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/category_control">
+        <ListPreference
+            android:title="@string/category_control"
+            android:key="control"
+            android:defaultValue="@string/list_control_joystick"
+            android:entries="@array/control"
+            android:entryValues="@array/controlValue">
+
+            </ListPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/cattegoty_sensor">
+    </PreferenceCategory>
+
+</PreferenceScreen>

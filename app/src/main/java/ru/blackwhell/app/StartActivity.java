@@ -6,7 +6,9 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -18,7 +20,10 @@ public class StartActivity extends Activity implements View.OnClickListener {
     String actionStateChanged;
 
     Button BluetoothButton;
+    Button SettingButton;
     IntentFilter filter;
+
+    Intent goSetting;
 
     public BluetoothAdapter bluetooth = BluetoothAdapter.getDefaultAdapter();
 
@@ -62,17 +67,22 @@ public class StartActivity extends Activity implements View.OnClickListener {
         BluetoothButton = (Button)findViewById(R.id.BluetoothButton);
         BluetoothButton.setOnClickListener(this);
 
+        SettingButton = (Button)findViewById(R.id.SettingButton);
+        SettingButton.setOnClickListener(this);
+
         if(bluetooth == null) finish();                                                        //Если на устройстве нет Bluetooth, то завершаем приложение
         if(bluetooth.isEnabled()) BluetoothButton.setText(R.string.bluetooth_button_off);      //Проверяем включен или нет Bluetooth
         else BluetoothButton.setText(R.string.bluetooth_button_on);
 
         actionStateChanged = BluetoothAdapter.ACTION_STATE_CHANGED;
         filter = new IntentFilter(actionStateChanged);
+
     }
 
     @Override
     public void onClick(View v){
         switch (v.getId()){
+            //Кнопка Bluetooth
             case R.id.BluetoothButton:
                 registerReceiver(bluetoothState, filter);
 
@@ -83,6 +93,11 @@ public class StartActivity extends Activity implements View.OnClickListener {
                     bluetooth.enable();
                     BluetoothButton.setText(R.string.bluetooth_button_off);
                 }
+                break;
+            //Кнопка для вызова Настроек
+            case R.id.SettingButton:
+                goSetting = new Intent(getBaseContext(), SettingActivity.class);
+                startActivity(goSetting);
                 break;
         }
     }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Control category-->
+    <string-array name="control">
+        <item>@string/list_control_accelerometer</item>
+        <item>@string/list_control_joystick</item>
+    </string-array>
+
+    <string-array name="controlValue">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>
