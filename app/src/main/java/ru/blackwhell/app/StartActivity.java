@@ -7,11 +7,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+
+import java.util.Locale;
 
 
 public class StartActivity extends Activity implements View.OnClickListener {
@@ -21,9 +24,16 @@ public class StartActivity extends Activity implements View.OnClickListener {
 
     Button BluetoothButton;
     Button SettingButton;
+    Button ExitButton;
     IntentFilter filter;
 
     Intent goSetting;
+
+    private SharedPreferences preferences;
+    private String language;
+    private Locale local;
+
+
 
     public BluetoothAdapter bluetooth = BluetoothAdapter.getDefaultAdapter();
 
@@ -64,11 +74,22 @@ public class StartActivity extends Activity implements View.OnClickListener {
         requestWindowFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         setContentView(R.layout.activity_start);
 
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        language = preferences.getString("lang", "default");
+
+        if(language.equals("default")) language = getResources().getConfiguration().locale.getCountry();
+        Config();
+
         BluetoothButton = (Button)findViewById(R.id.BluetoothButton);
         BluetoothButton.setOnClickListener(this);
 
         SettingButton = (Button)findViewById(R.id.SettingButton);
         SettingButton.setOnClickListener(this);
+        SettingButton.setText(R.string.setting_app);
+
+        ExitButton = (Button)findViewById(R.id.ExitButton);
+        ExitButton.setOnClickListener(this);
+        ExitButton.setText(R.string.exit_app);
 
         if(bluetooth == null) finish();                                                        //Если на устройстве нет Bluetooth, то завершаем приложение
         if(bluetooth.isEnabled()) BluetoothButton.setText(R.string.bluetooth_button_off);      //Проверяем включен или нет Bluetooth
@@ -99,6 +120,24 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 goSetting = new Intent(getBaseContext(), SettingActivity.class);
                 startActivity(goSetting);
                 break;
+            case R.id.ExitButton:
+                System.exit(1);
+                break;
         }
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration conf){
+       super.onConfigurationChanged(conf);
+        Config();
+
+    }
+
+    public void Config(){
+        local = new Locale(language);
+        Locale.setDefault(local);
+        Configuration config = new Configuration();
+        config.locale = local;
+        getBaseContext().getResources().updateConfiguration(config, null);
     }
 }

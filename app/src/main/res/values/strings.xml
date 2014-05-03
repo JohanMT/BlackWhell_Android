@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--Other-->
     <string name="app_name">BlackWhell</string>
-    <string name="loading">Подождите..</string>
-    <string name="setting">Настройки</string>
+    <string name="loading">White..</string>
+    <string name="setting_app">Settings</string>
 
     <!--Start Activity -->
-    <string name="bluetooth_button_on">Включить Bluetooth</string>
-    <string name="bluetooth_button_off">Отключить Bluetooth</string>
+    <string name="bluetooth_button_on">Enable Bluetooth</string>
+    <string name="bluetooth_button_off">Disable Bluetooth</string>
+    <string name="exit_app">Exit</string>
     
     <!--Setting Activity-->
-    <string name="category_control">Управление</string>
-    <string name="list_control_accelerometer">Акселерометр</string>
-    <string name="text_control_accelerometer">Управление акселерометром</string>
-    <string name="list_control_joystick">Джойстик</string>
-    <string name="text_control_joystick">Управление джойстиком</string>
+    <string name="category_app">Application</string>
+    <string name="text_control">Select the type of control</string>
+    <string name="list_control_accelerometer">Accelerometer</string>
+    <string name="list_control_joystick">Joysticks</string>
 
+    <string name="list_language">Language</string>
+    <string name="text_language">Select the application language</string>
+    <string name="def">Default</string>
+    <string name="ru">Русский</string>
+    <string name="en">English</string>
 
-    <string name="cattegoty_sensor">Датчики</string>
+    <!--**********************************************************-->
+    <string name="category_sensor">Sensor</string>
+    <string name="text_battery"> Show the battery charge</string>
 
 </resources>

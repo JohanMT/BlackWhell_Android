@@ -10,5 +10,18 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+    
+    <!--*****************************************-->
+    <string-array name="lang">
+        <item>@string/def</item>
+        <item>@string/ru</item>
+        <item>@string/en</item>
+    </string-array>
+
+    <string-array name="langValue">
+        <item>default</item>
+        <item>ru</item>
+        <item>en</item>
+    </string-array>
 
 </resources>

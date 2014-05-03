@@ -3,19 +3,33 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
-        android:title="@string/category_control">
+        android:title="@string/category_app">
         <ListPreference
-            android:title="@string/category_control"
+            android:title="@string/category_app"
             android:key="control"
+            android:summary="@string/text_control"
             android:defaultValue="@string/list_control_joystick"
             android:entries="@array/control"
             android:entryValues="@array/controlValue">
-
             </ListPreference>
+
+        <ListPreference
+            android:title="@string/list_language"
+            android:summary="@string/text_language"
+            android:key="lang"
+            android:defaultValue="@string/def"
+            android:entries="@array/lang"
+            android:entryValues="@array/langValue">
+        </ListPreference>
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/cattegoty_sensor">
+        android:title="@string/category_sensor">
+        <CheckBoxPreference
+            android:key="battery"
+            android:defaultValue="true"
+            android:summary="@string/text_battery">
+        </CheckBoxPreference>
     </PreferenceCategory>
 
 </PreferenceScreen>
