@@ -27,9 +27,27 @@
         android:title="@string/category_sensor">
         <CheckBoxPreference
             android:key="battery"
-            android:defaultValue="true"
+            android:defaultValue="false"
+            android:title="@string/title_battery"
             android:summary="@string/text_battery">
         </CheckBoxPreference>
+
+        <CheckBoxPreference
+            android:key="temp"
+            android:defaultValue="false"
+            android:title="@string/title_temp"
+            android:summary="@string/text_temp">
+        </CheckBoxPreference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/category_bluetooth">
+        <CheckBoxPreference
+            android:key="bluetooth"
+            android:defaultValue="false"
+            android:title="@string/title_address"
+            android:summary="@string/text_address">
+            </CheckBoxPreference>
     </PreferenceCategory>
 
 </PreferenceScreen>

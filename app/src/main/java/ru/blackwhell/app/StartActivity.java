@@ -13,7 +13,6 @@ import android.preference.PreferenceManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-
 import java.util.Locale;
 
 
@@ -32,7 +31,6 @@ public class StartActivity extends Activity implements View.OnClickListener {
     private SharedPreferences preferences;
     private String language;
     private Locale local;
-
 
 
     public BluetoothAdapter bluetooth = BluetoothAdapter.getDefaultAdapter();
@@ -78,7 +76,11 @@ public class StartActivity extends Activity implements View.OnClickListener {
         language = preferences.getString("lang", "default");
 
         if(language.equals("default")) language = getResources().getConfiguration().locale.getCountry();
-        Config();
+        local = new Locale(language);
+        Locale.setDefault(local);
+        Configuration config = new Configuration();
+        config.locale = local;
+        getBaseContext().getResources().updateConfiguration(config, null);
 
         BluetoothButton = (Button)findViewById(R.id.BluetoothButton);
         BluetoothButton.setOnClickListener(this);
@@ -97,7 +99,6 @@ public class StartActivity extends Activity implements View.OnClickListener {
 
         actionStateChanged = BluetoothAdapter.ACTION_STATE_CHANGED;
         filter = new IntentFilter(actionStateChanged);
-
     }
 
     @Override
@@ -124,20 +125,5 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 System.exit(1);
                 break;
         }
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration conf){
-       super.onConfigurationChanged(conf);
-        Config();
-
-    }
-
-    public void Config(){
-        local = new Locale(language);
-        Locale.setDefault(local);
-        Configuration config = new Configuration();
-        config.locale = local;
-        getBaseContext().getResources().updateConfiguration(config, null);
     }
 }

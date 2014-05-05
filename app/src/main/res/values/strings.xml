@@ -3,28 +3,45 @@
 
     <!--Other-->
     <string name="app_name">BlackWhell</string>
-    <string name="loading">White..</string>
-    <string name="setting_app">Settings</string>
+    <string name="loading">Подождите..</string>
+    <string name="setting_app">Настройки</string>
 
     <!--Start Activity -->
-    <string name="bluetooth_button_on">Enable Bluetooth</string>
-    <string name="bluetooth_button_off">Disable Bluetooth</string>
-    <string name="exit_app">Exit</string>
+    <string name="bluetooth_button_on">Включить Bluetooth</string>
+    <string name="bluetooth_button_off">Отключить Bluetooth</string>
+    <string name="exit_app">Выйти</string>
     
     <!--Setting Activity-->
-    <string name="category_app">Application</string>
-    <string name="text_control">Select the type of control</string>
-    <string name="list_control_accelerometer">Accelerometer</string>
-    <string name="list_control_joystick">Joysticks</string>
+    <string name="category_app">Приложение</string>
+    <string name="control">Управление</string>
+    <string name="text_control">Выберите тип управления</string>
+    <string name="list_control_accelerometer">Акселерометр</string>
+    <string name="list_control_joystick">Джойстики</string>
 
-    <string name="list_language">Language</string>
-    <string name="text_language">Select the application language</string>
+    <string name="list_language">Язык</string>
+    <string name="text_language">При изменении этой настройки необходимо перезапустить приложение</string>
     <string name="def">Default</string>
     <string name="ru">Русский</string>
     <string name="en">English</string>
+    <string name="de">Deutsch</string>
+
+    <string name="title_dialog">Были сделаны изменения</string>
+    <string name="text_dialog">Что бы изменения вступили в силу, необходимо перезапустить приложение\n\r Хотите ли вы сделать это?</string>
+    <string name="yes_dialog">Да</string>
+    <string name="no_dialog">Нет</string>
 
     <!--**********************************************************-->
-    <string name="category_sensor">Sensor</string>
-    <string name="text_battery"> Show the battery charge</string>
+    <string name="category_sensor">Датчики</string>
+    
+    <string name="title_battery">Батарея</string>
+    <string name="text_battery">Показать заряд батареи</string>
+    
+    <string name="title_temp">Температура</string>
+    <string name="text_temp">Показать температуру</string>
+    
+    <!--*********************************************************-->
+    <string name="category_bluetooth">Bluetooth устройство</string>
 
+    <string name="title_address">MAC-адрес</string>
+    <string name="text_address">Показать на стартовом экране MAC-адресс Bluetooth модуля</string>
 </resources>
