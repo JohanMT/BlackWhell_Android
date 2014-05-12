@@ -24,9 +24,11 @@ public class StartActivity extends Activity implements View.OnClickListener {
     Button BluetoothButton;
     Button SettingButton;
     Button ExitButton;
+    Button ConnectButton;
     IntentFilter filter;
 
     Intent goSetting;
+    Intent goConnect;
 
     private SharedPreferences preferences;
     private String language;
@@ -93,6 +95,10 @@ public class StartActivity extends Activity implements View.OnClickListener {
         ExitButton.setOnClickListener(this);
         ExitButton.setText(R.string.exit_app);
 
+        ConnectButton = (Button)findViewById(R.id.ConnectButton);
+        ConnectButton.setOnClickListener(this);
+        ConnectButton.setText(R.string.connect);
+
         if(bluetooth == null) finish();                                                        //Если на устройстве нет Bluetooth, то завершаем приложение
         if(bluetooth.isEnabled()) BluetoothButton.setText(R.string.bluetooth_button_off);      //Проверяем включен или нет Bluetooth
         else BluetoothButton.setText(R.string.bluetooth_button_on);
@@ -124,6 +130,10 @@ public class StartActivity extends Activity implements View.OnClickListener {
             case R.id.ExitButton:
                 System.exit(1);
                 break;
+            case R.id.ConnectButton:
+                goConnect = new Intent(getBaseContext(), JoystickControlActivity.class);
+                startActivity(goConnect);
+              break;
         }
     }
 }

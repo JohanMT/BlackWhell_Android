@@ -13,7 +13,8 @@
         android:layout_height="wrap_content"
         android:text="@string/bluetooth_button_on"
         android:id="@+id/BluetoothButton"
-        android:layout_centerVertical="true"
+        android:layout_marginTop="135dp"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -39,4 +40,16 @@
         android:layout_marginTop="27dp"
         android:layout_alignRight="@+id/SettingButton"
         android:layout_alignEnd="@+id/SettingButton" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/connect"
+        android:id="@+id/ConnectButton"
+        android:layout_below="@+id/ExitButton"
+        android:layout_alignLeft="@+id/ExitButton"
+        android:layout_alignStart="@+id/ExitButton"
+        android:layout_marginTop="27dp"
+        android:layout_alignRight="@+id/ExitButton"
+        android:layout_alignEnd="@+id/ExitButton" />
 </RelativeLayout>

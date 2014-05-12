@@ -9,6 +9,7 @@
     <!--Start Activity -->
     <string name="bluetooth_button_on">Включить Bluetooth</string>
     <string name="bluetooth_button_off">Отключить Bluetooth</string>
+    <string name="connect">Соединиться</string>
     <string name="exit_app">Выйти</string>
     
     <!--Setting Activity-->
@@ -44,4 +45,6 @@
 
     <string name="title_address">MAC-адрес</string>
     <string name="text_address">Показать на стартовом экране MAC-адресс Bluetooth модуля</string>
+
+    <!--Joystick Control Activity-->
 </resources>

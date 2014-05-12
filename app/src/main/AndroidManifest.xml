@@ -32,5 +32,13 @@
             android:theme="@android:style/Theme.Black"
             android:configChanges="locale">
         </activity>
+
+        <activity
+            android:name=".JoystickControlActivity"
+            android:label="@string/connect"
+            android:theme="@android:style/Theme.Black"
+            android:configChanges="locale"
+            android:screenOrientation="landscape">
+            </activity>
     </application>
 </manifest>
