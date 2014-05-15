@@ -18,7 +18,8 @@
             android:name="ru.blackwhell.app.StartActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Black"
-            android:configChanges="locale">
+            android:configChanges="locale"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -33,10 +34,11 @@
             android:configChanges="locale">
         </activity>
 
+        <!--Contril Joystick Activity-->
         <activity
             android:name=".JoystickControlActivity"
             android:label="@string/connect"
-            android:theme="@android:style/Theme.Black"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             android:configChanges="locale"
             android:screenOrientation="landscape">
             </activity>

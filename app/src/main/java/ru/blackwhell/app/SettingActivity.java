@@ -25,7 +25,7 @@ public class SettingActivity extends PreferenceActivity  implements SharedPrefer
         AlertDialog.Builder dialog = new AlertDialog.Builder(this);
         dialog.setTitle(R.string.title_dialog);
         dialog.setMessage(R.string.text_dialog);
-        dialog.setIcon(R.drawable.ic_launcher);                                                 //Заменить икнонку нужно!!!
+        dialog.setIcon(R.drawable.ic_alarm);
 
         dialog.setPositiveButton(R.string.yes_dialog, new DialogInterface.OnClickListener() {
             @Override
