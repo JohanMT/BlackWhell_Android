@@ -34,7 +34,7 @@
             android:configChanges="locale">
         </activity>
 
-        <!--Contril Joystick Activity-->
+        <!--Control Joystick Activity-->
         <activity
             android:name=".JoystickControlActivity"
             android:label="@string/connect"

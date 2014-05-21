@@ -127,13 +127,24 @@ public class StartActivity extends Activity implements View.OnClickListener {
                 goSetting = new Intent(getBaseContext(), SettingActivity.class);
                 startActivity(goSetting);
                 break;
+
+            //Кнопка для выхода из приложения
             case R.id.ExitButton:
                 System.exit(1);
                 break;
+
+            //Соединяемся
             case R.id.ConnectButton:
+                setProgressBarIndeterminateVisibility(true);
                 goConnect = new Intent(getBaseContext(), JoystickControlActivity.class);
                 startActivity(goConnect);
               break;
         }
+    }
+
+    @Override
+    public void onResume(){
+        setProgressBarIndeterminateVisibility(false);
+        super.onResume();
     }
 }
