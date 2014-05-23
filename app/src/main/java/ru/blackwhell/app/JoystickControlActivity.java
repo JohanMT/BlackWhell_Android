@@ -11,12 +11,14 @@ import android.widget.ToggleButton;
 public class JoystickControlActivity extends Activity implements CompoundButton.OnCheckedChangeListener {
     ToggleButton left;
     ToggleButton right;
+    ToggleButton back;
 
     AnimationDrawable left_anim = null;
     AnimationDrawable right_anim = null;
 
     ImageView left_bg;
     ImageView right_bg;
+    ImageView back_bg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,8 +32,12 @@ public class JoystickControlActivity extends Activity implements CompoundButton.
         right = (ToggleButton)findViewById(R.id.right_button);
         right.setOnCheckedChangeListener(this);
 
+        back = (ToggleButton)findViewById(R.id.back_button);
+        back.setOnCheckedChangeListener(this);
+
         left_bg = (ImageView) findViewById(R.id.left_bg);
         right_bg = (ImageView)findViewById(R.id.right_bg);
+        back_bg = (ImageView)findViewById(R.id.back_bg);
 
     }
 
@@ -55,6 +61,12 @@ public class JoystickControlActivity extends Activity implements CompoundButton.
             left_anim.stop();
             left_bg.setBackgroundResource(R.drawable.left_off);
         }
+    }
+
+    public void onClickBackButton(View view){
+        if (((ToggleButton)view).isChecked()) back_bg.setBackgroundResource(R.drawable.back_on);
+        else back_bg.setBackgroundResource(R.drawable.back_off);
+
     }
 
     @Override

@@ -104,4 +104,28 @@
         android:layout_alignTop="@+id/right_bg"
         style="@style/toggle_button"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/back_bg"
+        android:background="@drawable/back_off"
+        android:layout_alignBottom="@+id/vertical_seekbar_image"
+        android:layout_toRightOf="@+id/vertical_seekbar_image"
+        android:layout_marginLeft="10dp"/>
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New ToggleButton"
+        android:id="@+id/back_button"
+        android:layout_alignRight="@+id/back_bg"
+        android:layout_alignEnd="@+id/back_bg"
+        android:layout_alignTop="@+id/back_bg"
+        android:layout_alignLeft="@+id/back_bg"
+        android:layout_alignStart="@+id/back_bg"
+        android:layout_alignBottom="@+id/back_bg"
+        style="@style/toggle_button"
+        android:onClick="onClickBackButton"/>
+
+
 </RelativeLayout>
